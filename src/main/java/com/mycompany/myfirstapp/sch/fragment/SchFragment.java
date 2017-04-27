@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.SearchView;
 
 import com.mycompany.myfirstapp.R;
@@ -21,7 +22,7 @@ import com.mycompany.myfirstapp.sch.SchView;
  */
 
 public class SchFragment extends Fragment {
-    ImageButton mMe;
+    ImageView mMe;
     SearchView mSearchView;
     SchPresenter mPresenter;
 
@@ -34,7 +35,7 @@ public class SchFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.sch_main, container, false);
-        mMe = (ImageButton) view.findViewById(R.id.sch_presonal);
+        mMe = (ImageView) view.findViewById(R.id.sch_presonal);
         mMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -33,6 +33,9 @@
         <activity android:name=".sch.fragment.mystudents.StudentsView"></activity>
         <activity android:name=".sch.fragment.teachingplan.AddPlanView"></activity>
         <activity android:name=".sch.fragment.teachingplan.PlanDetailsView"></activity>
+        <activity android:name=".sch.fragment.me.PushTrainView"></activity>
+        <activity android:name=".cor.fragment.cor.TeachPlanView"></activity>
+        <activity android:name=".cor.fragment.me.AddPlaceView"></activity>
     </application>
 
 </manifest>

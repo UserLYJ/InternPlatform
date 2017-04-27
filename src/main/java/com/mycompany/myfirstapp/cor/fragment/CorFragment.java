@@ -9,7 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.SearchView;
 
 import com.mycompany.myfirstapp.R;
@@ -22,9 +24,10 @@ import com.mycompany.myfirstapp.cor.CorView;
 
 public class CorFragment extends Fragment implements View.OnClickListener{
 
-    ImageButton mMe;
+    ImageView mMe;
     SearchView mSearchView;
     CorPresenter mPresenter;
+    GridView mRecvPlan;
 
     @Override
     public void onAttach(Context context) {
@@ -38,8 +41,9 @@ public class CorFragment extends Fragment implements View.OnClickListener{
         View view = inflater.inflate(R.layout.cor_main, container, false);
 
         mSearchView = (SearchView)view.findViewById(R.id.cor_searchView);
-        mMe = (ImageButton) view.findViewById(R.id.cor_presonal);
+        mMe = (ImageView) view.findViewById(R.id.cor_presonal);
         mMe.setOnClickListener(this);
+        mRecvPlan = (GridView) view.findViewById(R.id.gv_cor_students);
 
         return view;
     }

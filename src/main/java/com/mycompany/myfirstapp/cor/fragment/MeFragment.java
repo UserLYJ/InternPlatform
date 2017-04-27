@@ -20,9 +20,10 @@ import com.mycompany.myfirstapp.sch.SchView;
  * Created by wangz on 2017/4/16.
  */
 
-public class MeFragment extends Fragment {
+public class MeFragment extends Fragment implements View.OnClickListener{
 
     ImageView mInfor, mOffer, mCollection;
+    ImageView [] mImageView = new ImageView[5];
     CorPresenter mPresenter;
 
     @Override
@@ -36,9 +37,11 @@ public class MeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.cor_presonal_, container, false);
+
         mCollection = (ImageView) view.findViewById(R.id.imageView4);
         mInfor = (ImageView) view.findViewById(R.id.imageView5);
         mOffer = (ImageView) view.findViewById(R.id.imageView2);
+        mImageView[0] = (ImageView)view.findViewById(R.id.imageView6);
 
         mCollection.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +61,16 @@ public class MeFragment extends Fragment {
                 mPresenter.onOffer();
             }
         });
+        mImageView[0].setOnClickListener(this);
         return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.imageView6:
+
+                break;
+        }
     }
 }
