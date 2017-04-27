@@ -1,0 +1,63 @@
+package com.mycompany.myfirstapp.cor.fragment;
+
+import android.app.Fragment;
+import android.content.Context;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+
+import com.mycompany.myfirstapp.R;
+import com.mycompany.myfirstapp.cor.CorPresenter;
+import com.mycompany.myfirstapp.cor.CorView;
+import com.mycompany.myfirstapp.sch.SchPresenter;
+import com.mycompany.myfirstapp.sch.SchView;
+
+/**
+ * Created by wangz on 2017/4/16.
+ */
+
+public class MeFragment extends Fragment {
+
+    ImageView mInfor, mOffer, mCollection;
+    CorPresenter mPresenter;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        CorView corView = (CorView) getActivity();
+        mPresenter = corView.mPresenter;
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.cor_presonal_, container, false);
+        mCollection = (ImageView) view.findViewById(R.id.imageView4);
+        mInfor = (ImageView) view.findViewById(R.id.imageView5);
+        mOffer = (ImageView) view.findViewById(R.id.imageView2);
+
+        mCollection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPresenter.onCollection();
+            }
+        });
+        mInfor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPresenter.onInfor();
+            }
+        });
+        mOffer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPresenter.onOffer();
+            }
+        });
+        return view;
+    }
+}

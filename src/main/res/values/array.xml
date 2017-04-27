@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tempResume">
+        <item>张三 浙江中医药大学</item>
+        <item>李四 北京大学</item>
+        <item>王五 清华大学</item>
+    </string-array>
+    <string-array name="tempPlace">
+        <item>Java开发</item>
+        <item>Android开发</item>
+        <item>php</item>
+        <item>c</item>
+        <item>c++</item>
+        <item>python</item>
+    </string-array>
+    <string-array name="tempChat">
+        <item>浙江中医药大学 X 华为</item>
+        <item>浙江大学 X 百度</item>
+    </string-array>
+    <string-array name="tempTeacher">
+        <item>Java培训师</item>
+        <item>Oracle培训师</item>
+        <item>PHP培训师</item>
+        <item>C++培训师</item>
+    </string-array>
+</resources>

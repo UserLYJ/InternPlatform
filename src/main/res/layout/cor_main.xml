@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1cffe641"
+    android:dividerPadding="@dimen/abc_action_bar_elevation_material"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <SearchView
+            android:id="@+id/cor_searchView"
+            android:layout_width="302dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.55"
+            android:queryHint="搜索企业/职位/地点"
+            app:queryHint="学生/学校/地区/专业" />
+
+        <ImageView
+            android:id="@+id/cor_presonal"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.53"
+            android:clickable="true"
+            app:srcCompat="@drawable/parsonal" />
+
+    </LinearLayout>
+
+
+    <ViewFlipper
+        android:id="@+id/cor_newsView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:autoStart="false"
+        android:background="#9c7bffe9"
+        android:clickable="true" />
+
+    <GridView
+        android:id="@+id/gv_cor_students"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:choiceMode="multipleChoice" />
+
+
+</LinearLayout>
