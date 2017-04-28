@@ -15,25 +15,28 @@
         android:orientation="horizontal">
 
         <Spinner
-            android:id="@+id/sp_spetype"
+            android:id="@+id/sp_tipsource"
             android:layout_width="188dp"
             android:layout_height="50sp"
             android:layout_weight="1"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            android:entries="@array/tipsource"/>
 
         <Spinner
             android:id="@+id/sp_time"
             android:layout_width="188dp"
             android:layout_height="50sp"
             android:layout_weight="1"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            android:entries="@array/time"/>
 
         <Spinner
-            android:id="@+id/sp_schtype"
+            android:id="@+id/sp_tiptype"
             android:layout_width="188dp"
             android:layout_height="50sp"
             android:layout_weight="1"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            android:entries="@array/tiptype"/>
 
     </LinearLayout>
 

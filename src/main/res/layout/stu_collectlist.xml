@@ -16,14 +16,16 @@
             android:layout_width="188dp"
             android:layout_height="50sp"
             android:layout_weight="1"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            android:entries="@array/stu_spetype"/>
 
         <Spinner
             android:id="@+id/sp_stu_address"
             android:layout_width="188dp"
             android:layout_height="50sp"
             android:layout_weight="1"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            android:entries="@array/area_"/>
 
     </LinearLayout>
 

@@ -47,7 +47,8 @@
             android:id="@+id/spinner4"
             android:layout_width="match_parent"
             android:layout_height="61dp"
-            android:layout_weight="2" />
+            android:layout_weight="2"
+            android:entries="@array/sch_spetype"/>
 
         <Button
             android:id="@+id/button9"
@@ -76,7 +77,8 @@
             android:id="@+id/spinner6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2" />
+            android:layout_weight="2"
+            android:entries="@array/classtype"/>
 
         <Button
             android:id="@+id/button10"
