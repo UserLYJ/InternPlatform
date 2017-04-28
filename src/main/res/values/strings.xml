@@ -1,6 +1,163 @@
 <resources>
-    <string name="app_name">My First App</string>
+    <string name="app_name">Helloworld</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="spetype">
+        <item>不限</item>
+        <item>java</item>
+        <item>php</item>
+        <item>h5/c3</item>
+        <item>xml</item>
+    </string-array>
+
+    <string-array name="stu_spetype">
+        <item>所需技能</item>
+        <item>java</item>
+        <item>php</item>
+        <item>h5/c3</item>
+        <item>xml</item>
+    </string-array>
+
+    <string-array name="schtype">
+        <item>不限</item>
+        <item>985/211</item>
+        <item>本科院校</item>
+        <item>专科院校</item>
+        <item>技校</item>
+    </string-array>
+
+    <string-array name="time">
+        <item>不限</item>
+        <item>今天</item>
+        <item>三天之内</item>
+        <item>一周之内</item>
+        <item>半个月</item>
+    </string-array>
+
+    <string-array name="schname">
+        <item>选择学校</item>
+        <item>浙江中医药大学</item>
+        <item>杭州电子科技大学</item>
+        <item>浙江大学</item>
+    </string-array>
+
+
+
+    <string-array name="province_">
+        <item>所在省份</item>
+        <item>浙江省</item>
+        <item>江苏省</item>
+        <item>安徽省</item>
+    </string-array>
+
+    <string-array name="city_">
+        <item>所在城市</item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="area_">
+        <item>所在区域</item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="tipsource">
+        <item>不限</item>
+        <item>老师</item>
+        <item>系统</item>
+        <item>学生</item>
+    </string-array>
+
+    <string-array name="tiptype">
+        <item>不限</item>
+        <item>聊天消息</item>
+        <item>反馈消息</item>
+        <item>系统消息</item>
+    </string-array>
+
+    <string-array name="classtype">
+        <item>选择性质</item>
+        <item>必修</item>
+        <item>选修</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="sch_spetype">
+        <item>选择课程</item>
+        <item>java</item>
+        <item>php</item>
+        <item>h5/c3</item>
+        <item>xml</item>
+    </string-array>
+
+    <string-array name="spename">
+        <item>请选择专业名</item>
+        <item>医学信息工程</item>
+        <item>计算机科学与技术</item>
+        <item>卫生检验与检疫</item>
+    </string-array>
+
+    <string-array name="sch_spename">
+        <item>不限</item>
+        <item>医学信息工程</item>
+        <item>计算机科学与技术</item>
+        <item>卫生检验与检疫</item>
+    </string-array>
+
+    <string-array name="_spename">
+        <item>选择专业</item>
+        <item>医学信息工程</item>
+        <item>计算机科学与技术</item>
+        <item>卫生检验与检疫</item>
+    </string-array>
+
+
+
+    <string-array name="istraining">
+        <item>是否实习</item>
+        <item>是</item>
+        <item>否</item>
+        <item>未知</item>
+    </string-array>
+
+    <string-array name="tocor1">
+        <item>选择排序方式</item>
+        <item>按名次排序</item>
+        <item>按经验排序</item>
+    </string-array>
+
+    <string-array name="tocor2">
+        <item>选择专业</item>
+        <item>医学信息工程</item>
+        <item>计算机科学与技术</item>
+        <item>卫生检验与检疫</item>
+    </string-array>
+
+    <string-array name="sasas">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="sasas">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="sasas">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+
+
+
 </resources>
