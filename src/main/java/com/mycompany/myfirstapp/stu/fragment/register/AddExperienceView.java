@@ -1,4 +1,4 @@
-package com.mycompany.myfirstapp.cor.fragment.trainingdep;
+package com.mycompany.myfirstapp.stu.fragment.register;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,17 +9,17 @@ import android.widget.Button;
 import com.mycompany.myfirstapp.R;
 
 /**
- * Created by wangz on 2017/4/17.
+ * Created by wangz on 2017/4/27.
  */
 
-public class AddTeacherView extends AppCompatActivity{
-    Button mSave;
+public class AddExperienceView extends AppCompatActivity {
+    Button mButton;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.cor_addtrainteacher);
-        mSave.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.stu_addexperience);
+        mButton = (Button) findViewById(R.id.btn_save);
+        mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();

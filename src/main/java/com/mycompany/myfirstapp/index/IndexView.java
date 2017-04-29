@@ -1,6 +1,7 @@
 package com.mycompany.myfirstapp.index;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
@@ -16,6 +17,10 @@ import com.mycompany.myfirstapp.cor.CorView;
 import com.mycompany.myfirstapp.sch.SchView;
 import com.mycompany.myfirstapp.stu.StuView;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+
 /**
  * Created by wangz on 2017/4/14.
  */
@@ -26,6 +31,7 @@ public class IndexView extends AppCompatActivity {
     EditText mName, mPassword;
     Button mSignIn, mSignUp;
     IndexPresenter mPresenter;
+    SQLiteDatabase mDatabase;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -71,7 +77,24 @@ public class IndexView extends AppCompatActivity {
             }
         });
 
-        mPresenter = new IndexPresenter(this);
+        File f = new File(getCacheDir()+"/test.db");
+        if (!f.exists()) try {
+
+            InputStream is = getAssets().open("test.db");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+
+
+            FileOutputStream fos = new FileOutputStream(f);
+            fos.write(buffer);
+            fos.close();
+        } catch (Exception e) { throw new RuntimeException(e); }
+
+        mDatabase = SQLiteDatabase.openDatabase(getCacheDir().getPath() + "/test.db", null, SQLiteDatabase.OPEN_READWRITE);
+
+        mPresenter = new IndexPresenter(this, mDatabase);
     }
     public void GoToCorView(){
         Intent intent = new Intent(this, CorView.class);
@@ -87,5 +110,11 @@ public class IndexView extends AppCompatActivity {
     }
     public void showToast(String content){
         Toast.makeText(this, content, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mDatabase.close();
     }
 }

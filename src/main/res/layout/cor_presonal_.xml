@@ -260,7 +260,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/btn_cor_sitting"
                 android:layout_width="95dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linearLayout2"
@@ -270,6 +269,7 @@
                 android:weightSum="1">
 
                 <ImageView
+                    android:clickable="true"
                     android:id="@+id/imageView6"
                     android:layout_width="70dp"
                     android:layout_height="60dp"
@@ -302,7 +302,7 @@
                 android:weightSum="1">
 
                 <ImageView
-                    android:id="@+id/imageView6"
+                    android:id="@+id/imageView10"
                     android:layout_width="70dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center_horizontal"
@@ -335,7 +335,7 @@
                 android:weightSum="1">
 
                 <ImageView
-                    android:id="@+id/imageView7"
+                    android:id="@+id/imageView11"
                     android:layout_width="70dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center_horizontal"

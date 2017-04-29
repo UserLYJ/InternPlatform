@@ -2,6 +2,7 @@ package com.mycompany.myfirstapp.cor.fragment;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 import com.mycompany.myfirstapp.R;
 import com.mycompany.myfirstapp.cor.CorPresenter;
 import com.mycompany.myfirstapp.cor.CorView;
+import com.mycompany.myfirstapp.cor.fragment.me.AddPlaceView;
 import com.mycompany.myfirstapp.sch.SchPresenter;
 import com.mycompany.myfirstapp.sch.SchView;
 
@@ -69,7 +71,7 @@ public class MeFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.imageView6:
-
+                startActivity(new Intent(getContext(), AddPlaceView.class));
                 break;
         }
     }

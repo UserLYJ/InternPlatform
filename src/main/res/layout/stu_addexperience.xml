@@ -62,7 +62,7 @@
         android:hint="任职经历" />
 
     <Button
-        android:id="@+id/btn_stu_saveexper"
+        android:id="@+id/btn_save"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_weight="0.04"

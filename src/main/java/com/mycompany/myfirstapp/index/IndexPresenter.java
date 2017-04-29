@@ -1,5 +1,7 @@
 package com.mycompany.myfirstapp.index;
 
+import android.database.sqlite.SQLiteDatabase;
+
 /**
  * Created by wangz on 2017/4/14.
  */
@@ -9,9 +11,9 @@ public class IndexPresenter {
     int identity;
     IndexModel mModel;
 
-    IndexPresenter(IndexView indexView){
+    IndexPresenter(IndexView indexView, SQLiteDatabase mDatabase){
         mView = indexView;
-        mModel = new IndexModel(this);
+        mModel = new IndexModel(this, mDatabase);
     }
     public void onSignIn(String username, String password){
         String realPassword;

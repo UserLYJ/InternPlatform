@@ -36,6 +36,7 @@
         <activity android:name=".sch.fragment.me.PushTrainView"></activity>
         <activity android:name=".cor.fragment.cor.TeachPlanView"></activity>
         <activity android:name=".cor.fragment.me.AddPlaceView"></activity>
+        <activity android:name=".stu.fragment.register.AddExperienceView"></activity>
     </application>
 
 </manifest>
