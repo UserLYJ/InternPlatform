@@ -72,13 +72,15 @@
             android:id="@+id/spinner3"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:entries="@array/tocor1"/>
 
         <Spinner
             android:id="@+id/spinner2"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:entries="@array/tocor2"/>
     </LinearLayout>
 
     <GridView

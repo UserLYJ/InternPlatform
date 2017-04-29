@@ -12,9 +12,9 @@
 
         <TextView
             android:id="@+id/textView34"
-            android:layout_width="match_parent"
+			android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+			android:layout_weight="1"
             android:text="学校名："
             android:textSize="24sp" />
 
@@ -22,7 +22,9 @@
             android:id="@+id/spinner5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:entries="@array/schname"
+            />
     </LinearLayout>
 
     <EditText
