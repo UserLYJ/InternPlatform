@@ -12,20 +12,18 @@
         android:orientation="horizontal">
 
         <Spinner
-            android:id="@+id/sp_sch_spename"
+            android:id="@+id/sp_sch_spetype"
             android:layout_width="188dp"
             android:layout_height="50sp"
             android:layout_weight="1"
-            android:spinnerMode="dropdown"
-            android:entries="@array/_spename"/>
+            android:spinnerMode="dropdown" />
 
         <Spinner
             android:id="@+id/istraining"
             android:layout_width="188dp"
             android:layout_height="50sp"
             android:layout_weight="1"
-            android:spinnerMode="dropdown"
-            android:entries="@array/istraining"/>
+            android:spinnerMode="dropdown" />
 
     </LinearLayout>
 

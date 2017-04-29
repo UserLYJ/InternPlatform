@@ -16,16 +16,14 @@
             android:layout_width="188dp"
             android:layout_height="50sp"
             android:layout_weight="1"
-            android:spinnerMode="dropdown"
-            android:entries="@array/spetype"/>
+            android:spinnerMode="dropdown" />
 
         <Spinner
             android:id="@+id/sp_cor_schtype"
             android:layout_width="188dp"
             android:layout_height="50sp"
             android:layout_weight="1"
-            android:spinnerMode="dropdown"
-            android:entries="@array/schtype"/>
+            android:spinnerMode="dropdown" />
 
     </LinearLayout>
 
