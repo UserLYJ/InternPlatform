@@ -69,18 +69,16 @@
         android:orientation="horizontal">
 
         <Spinner
-            android:id="@+id/tocor1"
+            android:id="@+id/spinner3"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_weight="1"
-            android:entries="@array/tocor1"/>
+            android:layout_weight="1" />
 
         <Spinner
-            android:id="@+id/tocor2"
+            android:id="@+id/spinner2"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_weight="1"
-            android:entries="@array/tocor2"/>
+            android:layout_weight="1" />
     </LinearLayout>
 
     <GridView
