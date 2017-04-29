@@ -34,7 +34,7 @@
         android:inputType="textPersonName" />
 
     <GridView
-        android:id="@+id/gridView"
+        android:id="@+id/number"
         android:layout_width="match_parent"
         android:layout_height="417dp" />
 

@@ -61,7 +61,7 @@ public class AddPlaceView extends AppCompatActivity implements View.OnClickListe
             }
         });
         mStuCount = (EditText) mDialogView.findViewById(R.id.editText9);
-        mList = (GridView) mDialogView.findViewById(R.id.gridView);
+        mList = (GridView) mDialogView.findViewById(R.id.number);
         mConfirm = (Button) mDialogView.findViewById(R.id.btn_comfirm);
         mConfirm.setOnClickListener(this);
         mSave = (Button) mDialogView.findViewById(R.id.save);
