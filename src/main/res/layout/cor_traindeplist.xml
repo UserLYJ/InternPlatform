@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1cffe641"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <GridView
+        android:id="@+id/gv_cor_myplacellist"
+        android:layout_width="match_parent"
+        android:layout_height="457dp"
+        android:layout_weight="0.96" />
+
+    <Button
+        android:id="@+id/btn_cor_addtrainteacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加培训师" />
+</LinearLayout>

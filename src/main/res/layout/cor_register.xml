@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1cffe641"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.59">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="166dp"
+                android:layout_weight="0.20"
+                android:alpha="0.9"
+                android:background="@android:color/holo_blue_light"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/corimage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:adjustViewBounds="false"
+                    android:alpha="1"
+                    android:cropToPadding="false"
+                    android:src="@drawable/friend_" />
+
+                <TextView
+                    android:id="@+id/tip_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="点击添加/更换头像"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/background_light" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/cor_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.59"
+                android:hint="姓名"
+                android:inputType="textPersonName" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.59"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbtn_man"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:text="男" />
+
+                    <RadioButton
+                        android:id="@+id/rbtn_woman"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:text="女" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/sch_id_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20"
+                android:ems="10"
+                android:hint="身份证号"
+                android:inputType="time" />
+
+            <EditText
+                android:id="@+id/cor_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.59"
+                android:ems="10"
+                android:hint="出生年月"
+                android:inputType="time" />
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                style="@android:style/Widget.DatePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/cor_corname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="0.59"
+                android:ems="10"
+                android:hint="企业名称"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/cor_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20"
+                android:ems="10"
+                android:hint="企业编号"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/cor_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.59"
+                android:hint="企业所在地" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.20"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/province_"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_weight="1"
+                    android:contextClickable="false"
+                    android:spinnerMode="dropdown" />
+
+                <Spinner
+                    android:id="@+id/city_"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown" />
+
+                <Spinner
+                    android:id="@+id/area_"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/cor_phonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="0.59"
+                android:ems="10"
+                android:hint="联系方式"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/cor_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.59"
+                android:ems="10"
+                android:hint="电子邮箱"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/cor_describe"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:hint="公司描述"
+                android:textAlignment="textStart" />
+
+            <Button
+                android:id="@+id/btn_cor_save"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.59"
+                android:text="保存" />
+
+            <Button
+                android:id="@+id/btn_cor_identify"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.59"
+                android:text="认证" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

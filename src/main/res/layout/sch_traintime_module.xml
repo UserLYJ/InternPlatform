@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/spename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="专业名"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/spetime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="专业实习时间"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+</LinearLayout>
