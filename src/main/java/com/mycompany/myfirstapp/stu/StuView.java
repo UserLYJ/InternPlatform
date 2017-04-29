@@ -2,6 +2,7 @@ package com.mycompany.myfirstapp.stu;
 
 import android.app.FragmentManager;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -37,6 +38,7 @@ public class StuView extends AppCompatActivity implements View.OnClickListener{
     private PlaceFragment mJobFragment;
     private MeFragment mMeFragment;
     Bitmap[] mTabButtonBitmap = new Bitmap[10];
+    private SQLiteDatabase mDatabase;
 
 
     @Override
@@ -99,6 +101,8 @@ public class StuView extends AppCompatActivity implements View.OnClickListener{
         mJob.bitmap = mTabButtonBitmap[3];
         mResume.bitmap = mTabButtonBitmap[9];
         mSubmit.bitmap = mTabButtonBitmap[7];
+
+        mDatabase = SQLiteDatabase.openDatabase(getCacheDir() + "/test.db", null, SQLiteDatabase.OPEN_READWRITE);
     }
 
     @Override
@@ -157,5 +161,10 @@ public class StuView extends AppCompatActivity implements View.OnClickListener{
     public void GoToMeFragment() {
         mManager.beginTransaction().replace(R.id.cor_container, mMeFragment).commitNow();
 
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mDatabase.close();
     }
 }

@@ -1,6 +1,7 @@
 package com.mycompany.myfirstapp.sch;
 
 import android.app.FragmentManager;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -36,6 +37,7 @@ public class SchView extends AppCompatActivity implements View.OnClickListener{
 
     private FragmentManager mManager;
     public SchPresenter mPresenter;
+    public SQLiteDatabase mDatabase;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -97,6 +99,8 @@ public class SchView extends AppCompatActivity implements View.OnClickListener{
         mBtnMessage.bitmap = mTabButtonBitmap[1];
         mBtnMore.bitmap = mTabButtonBitmap[3];
         mBtnPlan.bitmap = mTabButtonBitmap[9];
+
+        mDatabase = SQLiteDatabase.openDatabase(getCacheDir() + "/test.db", null, SQLiteDatabase.OPEN_READWRITE);
     }
 
     @Override
@@ -157,5 +161,10 @@ public class SchView extends AppCompatActivity implements View.OnClickListener{
 
     public void GoToMeFragment() {
         mManager.beginTransaction().replace(R.id.sch_container,mMeFragment).commitNow();
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mDatabase.close();
     }
 }

@@ -4,6 +4,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -51,6 +52,7 @@ public class CorView extends AppCompatActivity implements View.OnClickListener{
     private ProgressDialog mDialog;
     TabButton mResume, mMessage, mPlace, mTrainDep, mIndex;
     Bitmap[] mTabButtonBitmap = new Bitmap[10];
+    private SQLiteDatabase mDatabase;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -116,6 +118,8 @@ public class CorView extends AppCompatActivity implements View.OnClickListener{
         mTrainDep.TAG = "培训部";
         mTrainDep.bitmap = mTabButtonBitmap[3];
         mTrainDep.paint.setColor(0xff000000);
+
+        mDatabase = SQLiteDatabase.openDatabase(getCacheDir() + "/test.db", null, SQLiteDatabase.OPEN_READWRITE);
     }
 
     public void changeToCor(){
@@ -254,5 +258,10 @@ public class CorView extends AppCompatActivity implements View.OnClickListener{
 
     public void GoToAddTeacher() {
         startActivity(new Intent(this, AddTeacherView.class));
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mDatabase.close();
     }
 }

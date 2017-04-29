@@ -20,27 +20,27 @@ public class IndexPresenter {
 
         switch (identity){
             case 0:
-                realPassword = mModel.getStuPassword(username);
-                if(!password.equals(realPassword)){
-                    mView.showToast("用户名或密码不正确");
-                    break;
-                }
+//                realPassword = mModel.getStuPassword(username);
+//                if(!password.equals(realPassword)){
+//                    mView.showToast("用户名或密码不正确");
+//                    break;
+//                }
                 mView.GoToStuView();
                 break;
             case 1:
-                realPassword = mModel.getCorPassword(username);
-                if(!password.equals(realPassword)){
-                    mView.showToast("用户名或密码不正确");
-                    break;
-                }
+//                realPassword = mModel.getCorPassword(username);
+//                if(!password.equals(realPassword)){
+//                    mView.showToast("用户名或密码不正确");
+//                    break;
+//                }
                 mView.GoToCorView();
                 break;
             case 2:
-                realPassword = mModel.getSchPassword(username);
-                if(!password.equals(realPassword)){
-                    mView.showToast("用户名或密码不正确");
-                    break;
-                }
+//                realPassword = mModel.getSchPassword(username);
+//                if(!password.equals(realPassword)){
+//                    mView.showToast("用户名或密码不正确");
+//                    break;
+//                }
                 mView.GoToSchView();
                 break;
         }

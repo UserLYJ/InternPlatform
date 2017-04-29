@@ -18,7 +18,7 @@ public class AddExperienceView extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.stu_addexperience);
-        mButton = (Button) findViewById(R.id.btn_save);
+        mButton = (Button) findViewById(R.id.btn_stu_saveexper);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

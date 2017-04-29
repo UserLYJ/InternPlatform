@@ -8,7 +8,7 @@ import com.mycompany.myfirstapp.stu.StuView;
  */
 
 public class SchPresenter {
-    private final SchView mView;
+    public final SchView mView;
     private final SchModel mModel;
 
     public SchPresenter(SchView mView) {
@@ -17,5 +17,13 @@ public class SchPresenter {
     }
     public void onMe() {
         mView.GoToMeFragment();
+    }
+
+    public void onCreateMyStudents() {
+        mModel.getMyStudentsData();
+    }
+
+    public void onCreateTeachingPlan() {
+        mModel.getTeachingPlanData();
     }
 }
