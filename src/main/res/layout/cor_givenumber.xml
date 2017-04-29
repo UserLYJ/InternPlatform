@@ -41,10 +41,11 @@
             android:textSize="30sp" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/spetype"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2" />
+            android:layout_weight="2"
+            android:entries="@array/spetype"/>
 
     </LinearLayout>
 
