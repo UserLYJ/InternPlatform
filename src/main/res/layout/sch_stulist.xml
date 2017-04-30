@@ -5,13 +5,6 @@
     android:background="#1cffe641"
     android:orientation="vertical">
 
-    <GridView
-        android:id="@+id/gv_sch_stulist"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
-        android:choiceMode="multipleChoice" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,15 +16,23 @@
             android:layout_width="188dp"
             android:layout_height="50sp"
             android:layout_weight="1"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            android:entries="@array/_spename"/>
 
         <Spinner
             android:id="@+id/istraining"
             android:layout_width="188dp"
             android:layout_height="50sp"
             android:layout_weight="1"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            android:entries="@array/istraining"/>
 
     </LinearLayout>
 
+    <GridView
+        android:id="@+id/gv_sch_stulist"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:choiceMode="multipleChoice" />
 </LinearLayout>
