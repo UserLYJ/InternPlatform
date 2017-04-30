@@ -2,6 +2,8 @@ package com.mycompany.myfirstapp.index;
 
 import android.database.sqlite.SQLiteDatabase;
 
+import static com.mycompany.myfirstapp.index.Constants.USER_ID;
+
 /**
  * Created by wangz on 2017/4/14.
  */
@@ -16,7 +18,7 @@ public class IndexPresenter {
         mModel = new IndexModel(this, mDatabase);
     }
     public void onSignIn(String username, String password){
-        String realPassword;
+        String realPassword = null;
 
         switch (identity){
             case 0:
@@ -25,6 +27,7 @@ public class IndexPresenter {
 //                    mView.showToast("用户名或密码不正确");
 //                    break;
 //                }
+                USER_ID = username;
                 mView.GoToStuView();
                 break;
             case 1:
@@ -33,6 +36,7 @@ public class IndexPresenter {
 //                    mView.showToast("用户名或密码不正确");
 //                    break;
 //                }
+                USER_ID = username;
                 mView.GoToCorView();
                 break;
             case 2:
@@ -41,6 +45,7 @@ public class IndexPresenter {
 //                    mView.showToast("用户名或密码不正确");
 //                    break;
 //                }
+                USER_ID = username;
                 mView.GoToSchView();
                 break;
         }

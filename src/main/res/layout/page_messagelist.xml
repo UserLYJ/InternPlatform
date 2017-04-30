@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:background="#1cffe641"
     android:orientation="vertical"
-    android:theme="@style/Base.TextAppearance.AppCompat.Body2"
     android:weightSum="1">
 
 

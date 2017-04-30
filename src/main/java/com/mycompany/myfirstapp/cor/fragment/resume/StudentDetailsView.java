@@ -1,5 +1,6 @@
 package com.mycompany.myfirstapp.cor.fragment.resume;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -30,10 +31,17 @@ public class StudentDetailsView extends AppCompatActivity {
                 finish();
             }
         });
+
         mTextView[0] = (TextView)findViewById(R.id.stu_name);
         mTextView[1] = (TextView)findViewById(R.id.stu_schname);
         mTextView[2] = (TextView)findViewById(R.id.exp);
         mTextView[3] = (TextView)findViewById(R.id.honor);
         mTextView[4] = (TextView)findViewById(R.id.stu_describe);
+
+        Intent intent = getIntent();
+        String[] data = intent.getStringArrayExtra("data");
+        for (int i = 0; i < 5; i++){
+            mTextView[i].setText(data[i]);
+        }
     }
 }

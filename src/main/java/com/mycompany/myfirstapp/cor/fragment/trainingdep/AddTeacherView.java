@@ -19,6 +19,7 @@ public class AddTeacherView extends AppCompatActivity{
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.cor_addtrainteacher);
+        mSave = (Button) findViewById(R.id.btn_savetrain);
         mSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

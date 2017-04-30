@@ -52,7 +52,7 @@ public class CorView extends AppCompatActivity implements View.OnClickListener{
     private ProgressDialog mDialog;
     TabButton mResume, mMessage, mPlace, mTrainDep, mIndex;
     Bitmap[] mTabButtonBitmap = new Bitmap[10];
-    private SQLiteDatabase mDatabase;
+    public SQLiteDatabase mDatabase;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -167,8 +167,9 @@ public class CorView extends AppCompatActivity implements View.OnClickListener{
         mDialog.dismiss();
     }
 
-    public void GoToStuDetails() {
+    public void GoToStuDetails(String[] details) {
         Intent intent = new Intent(getApplicationContext(), StudentDetailsView.class);
+        intent.putExtra("data", details);
         startActivity(intent);
     }
 
@@ -260,8 +261,8 @@ public class CorView extends AppCompatActivity implements View.OnClickListener{
         startActivity(new Intent(this, AddTeacherView.class));
     }
     @Override
-    protected void onStop() {
-        super.onStop();
+    protected void onDestroy() {
+        super.onDestroy();
         mDatabase.close();
     }
 }

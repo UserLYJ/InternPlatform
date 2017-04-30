@@ -8,7 +8,7 @@ import org.json.JSONObject;
 
 public class CorPresenter {
 
-    private final CorView mView;
+    public final CorView mView;
     private final CorModel mModel;
 
     CorPresenter(CorView corView){
@@ -19,7 +19,8 @@ public class CorPresenter {
     public void onResume(){
         mView.showProgressDialog("与服务器通信中");
         mView.changeToResume();
-        mModel.pullResumeList();
+        //mModel.pullResumeList();
+        mView.dismissProgressDialog();
     }
     public void onMessage(){
         mView.changeToMessage();
@@ -27,12 +28,14 @@ public class CorPresenter {
     public void onPlace(){
         mView.showProgressDialog("与服务器通信中");
         mView.changeToPlace();
-        mModel.pullPlacesList();
+        //mModel.pullPlacesList();
+        mView.dismissProgressDialog();
     }
     public void onTrainDep(){
         mView.showProgressDialog("与服务器通信中");
         mView.changeToTraining();
-        mModel.pullTrainDepList();
+        //mModel.pullTrainDepList();
+        mView.dismissProgressDialog();
     }
     public void onMe() {
         mView.changeToMe();
@@ -41,8 +44,9 @@ public class CorPresenter {
         mView.changeToCor();
     }
 
-    public void onResumeClicked(int position) {
-        mView.GoToStuDetails();
+    public void onResumeClicked(String Stuse) {
+        String []details = mModel.getResumeDetails(Stuse);
+        mView.GoToStuDetails(details);
     }
     public void onMessageClicked(int position) {
         mView.GoToChat();

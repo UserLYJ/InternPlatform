@@ -17,7 +17,7 @@ public class IndexModel {
         this.mDatabase = mDatabase;
     }
     public String getStuPassword(String username){
-        String sql = "select Upwd from Login where Uname = '"+username+"' and Uport = '学生'";
+        String sql = "select Upwd from Login where User = '"+username+"' and Uport = '学生'";
         Cursor cursor = mDatabase.rawQuery(sql, null);
         cursor.moveToNext();
         if(cursor.getCount() == 0) {
@@ -29,7 +29,7 @@ public class IndexModel {
         return pwd;
     }
     public String getCorPassword(String username){
-        String sql = "select Upwd from Login where Uname = '"+username+"' and Uport = '企业'";
+        String sql = "select Upwd from Login where User = '"+username+"' and Uport = '企业'";
         Cursor cursor = mDatabase.rawQuery(sql, null);
         cursor.moveToNext();
         if(cursor.getCount() == 0) {
@@ -41,7 +41,7 @@ public class IndexModel {
         return pwd;
     }
     public String getSchPassword(String username){
-        String sql = "select Upwd from Login where Uname = '"+username+"' and Uport = '院校'";
+        String sql = "select Upwd from Login where User = '"+username+"' and Uport = '院校'";
         Cursor cursor = mDatabase.rawQuery(sql, null);
         cursor.moveToNext();
         if(cursor.getCount() == 0) {

@@ -2,6 +2,7 @@ package com.mycompany.myfirstapp.cor.fragment;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import android.widget.SimpleAdapter;
 import com.mycompany.myfirstapp.R;
 import com.mycompany.myfirstapp.cor.CorPresenter;
 import com.mycompany.myfirstapp.cor.CorView;
+import com.mycompany.myfirstapp.utilities.SQLiteInteractor;
 
 import org.json.JSONObject;
 
@@ -31,6 +33,8 @@ public class ResumeFragment extends Fragment {
     private SimpleAdapter mAdapter;
     private GridView mResumeList;
     private boolean isAttached = false;
+    int[] idLists = {R.id.textView5, R.id.textView9, R.id.textView8};
+    String[] Stuse;
 
     @Override
     public void onAttach(Context context) {
@@ -47,16 +51,32 @@ public class ResumeFragment extends Fragment {
 
         mResumeList = (GridView)view.findViewById(R.id.gv_acceptResumes);
 
+        String sql = "select Login.Uname, Job.Jname, Apply.isApply from Login, Job, Apply, Recruitment " +
+                "where Apply.stuse = Login.User and Apply.Rid = Recruitment.Rid and Recruitment.Jid = Job.Jid";
+        String []keys = {"key1", "key2", "key3"};
+        List<HashMap<String, Object>> data = SQLiteInteractor.getData(mPresenter.mView.mDatabase, sql, keys);
+        mAdapter = new SimpleAdapter(getContext(), data, R.layout.gv_data, keys, idLists);
+        mResumeList.setAdapter(mAdapter);
+
+        sql = "select Apply.Stuse from Apply";
+        Cursor cursor = mPresenter.mView.mDatabase.rawQuery(sql, null);
+        int size = cursor.getCount();
+        Stuse = new String[size];
+        for(int i = 0; cursor.moveToNext(); i++){
+            Stuse[i] = cursor.getString(0);
+        }
+
         mResumeList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mPresenter.onResumeClicked(position);
+                mPresenter.onResumeClicked(Stuse[position]);
             }
         });
 
         return view;
     }
 
+    @Deprecated
     public void setAdapterToResume(JSONObject resJSON) {
         List<HashMap<String, Object>> data = new ArrayList<HashMap<String, Object>>();
 

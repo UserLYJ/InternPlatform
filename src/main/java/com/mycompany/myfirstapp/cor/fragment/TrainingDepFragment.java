@@ -2,6 +2,7 @@ package com.mycompany.myfirstapp.cor.fragment;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import android.widget.SimpleAdapter;
 import com.mycompany.myfirstapp.R;
 import com.mycompany.myfirstapp.cor.CorPresenter;
 import com.mycompany.myfirstapp.cor.CorView;
+import com.mycompany.myfirstapp.utilities.SQLiteInteractor;
 
 import org.json.JSONObject;
 
@@ -31,6 +33,8 @@ public class TrainingDepFragment extends Fragment {
     private SimpleAdapter mAdapter;
     CorPresenter mPresenter;
     private Button mAddTeacher;
+    int[] idLists = {R.id.textView5, R.id.textView9, R.id.textView8};
+
 
     @Override
     public void onAttach(Context context) {
@@ -58,9 +62,16 @@ public class TrainingDepFragment extends Fragment {
                 mPresenter.onTrainDepClicked(position);
             }
         });
+        String sql = "select Train.Tname, Train.Tsex, Job.Jname from Train, Job " +
+                "where Train.Jid = Job.Jid";
+        String []keys = {"key1", "key2", "key3"};
+        List<HashMap<String, Object>> data = SQLiteInteractor.getData(mPresenter.mView.mDatabase, sql, keys);
+        mAdapter = new SimpleAdapter(getContext(), data, R.layout.gv_data, keys, idLists);
+        mList.setAdapter(mAdapter);
+
         return view;
     }
-
+    @Deprecated
     public void setAdapterToTrainingDep(JSONObject resJSON) {
         List<HashMap<String, Object>> data = new ArrayList<HashMap<String, Object>>();
         String[] numerics = getActivity().getResources().getStringArray(R.array.tempTeacher);

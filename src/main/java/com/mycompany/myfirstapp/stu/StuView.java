@@ -163,8 +163,8 @@ public class StuView extends AppCompatActivity implements View.OnClickListener{
 
     }
     @Override
-    protected void onStop() {
-        super.onStop();
+    protected void onDestroy() {
+        super.onDestroy();
         mDatabase.close();
     }
 }

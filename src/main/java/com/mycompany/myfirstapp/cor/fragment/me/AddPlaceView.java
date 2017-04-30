@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.mycompany.myfirstapp.R;
 
@@ -52,7 +53,7 @@ public class AddPlaceView extends AppCompatActivity implements View.OnClickListe
         mSchoolName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                String schoolName = ((TextView)view).getText().toString();
             }
 
             @Override
@@ -62,6 +63,7 @@ public class AddPlaceView extends AppCompatActivity implements View.OnClickListe
         });
         mStuCount = (EditText) mDialogView.findViewById(R.id.editText9);
         mList = (GridView) mDialogView.findViewById(R.id.number);
+
         mConfirm = (Button) mDialogView.findViewById(R.id.btn_comfirm);
         mConfirm.setOnClickListener(this);
         mSave = (Button) mDialogView.findViewById(R.id.save);
