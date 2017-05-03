@@ -63,13 +63,19 @@ public class MessageFragment extends Fragment {
     public void setAdapterToMessage(JSONObject resJSON) {
         List<HashMap<String, Object>> data = new ArrayList<HashMap<String, Object>>();
         String[] numerics = getActivity().getResources().getStringArray(R.array.tempChat);
-        for(String numeric: numerics){
-            HashMap map = new HashMap();
-            map.put("numeric", numeric);
-            data.add(map);
-        }
-        String[] keys = new String[]{"numeric"};
-        int[] viewIDs = new int[]{R.id.textView5};
+
+        HashMap map = new HashMap();
+        map.put("key1", numerics[0]);
+        map.put("key2", "张三");
+        data.add(map);
+
+        map = new HashMap();
+        map.put("key1", numerics[1]);
+        map.put("key2", "李四");
+        data.add(map);
+
+        String[] keys = new String[]{"key1", "key2"};
+        int[] viewIDs = new int[]{R.id.textView5, R.id.textView9};
 
         mAdapter = new SimpleAdapter(getActivity(), data, R.layout.gv_data, keys, viewIDs);
 

@@ -222,6 +222,12 @@ public class CorView extends AppCompatActivity implements View.OnClickListener{
         mIndex.invalidate();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
     public void GoToChat() {
         Intent intent = new Intent(this, ChatView.class);
         startActivity(intent);

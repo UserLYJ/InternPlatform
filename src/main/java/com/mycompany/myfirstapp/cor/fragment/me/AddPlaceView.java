@@ -10,10 +10,17 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.mycompany.myfirstapp.R;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * Created by wangz on 2017/4/27.
@@ -29,6 +36,12 @@ public class AddPlaceView extends AppCompatActivity implements View.OnClickListe
     GridView mList;
     Button mSave, mConfirm;
     private AlertDialog mSchoolDialog;
+    String mName;
+    List<HashMap<String, Object>> list = new ArrayList<HashMap<String, Object>>();
+    HashMap<String, Object> map;
+    SimpleAdapter mAdapter;
+    String []keys = {"key1", "key2"};
+    int[] mViewIds = {R.id.schname, R.id.trainnumber};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -53,7 +66,7 @@ public class AddPlaceView extends AppCompatActivity implements View.OnClickListe
         mSchoolName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String schoolName = ((TextView)view).getText().toString();
+                mName = ((TextView)view).getText().toString();
             }
 
             @Override
@@ -63,6 +76,13 @@ public class AddPlaceView extends AppCompatActivity implements View.OnClickListe
         });
         mStuCount = (EditText) mDialogView.findViewById(R.id.editText9);
         mList = (GridView) mDialogView.findViewById(R.id.number);
+
+        map = new HashMap<String, Object>();
+        map.put(keys[0], "");
+        map.put(keys[1], "");
+        list.add(map);
+        mAdapter = new SimpleAdapter(this, list, R.layout.cor_trainnumber_module, keys, mViewIds);
+        mList.setAdapter(mAdapter);
 
         mConfirm = (Button) mDialogView.findViewById(R.id.btn_comfirm);
         mConfirm.setOnClickListener(this);
@@ -96,6 +116,11 @@ public class AddPlaceView extends AppCompatActivity implements View.OnClickListe
 
     private void showSchoolList() {
         String studentCount = mStuCount.getText().toString();
+        map = new HashMap<String, Object>();
+        map.put(keys[0], mName);
+        map.put(keys[1], studentCount);
+        list.add(map);
 
+        mAdapter.notifyDataSetChanged();
     }
 }

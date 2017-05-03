@@ -60,7 +60,7 @@ public class PlaceFragment extends Fragment {
             }
         });
 
-        String sql = "select Job.Jname, Recruitment.Rsum, Recruitment.Rarea from Job, Recruitment, Eu " +
+        String sql = "select Job.Jname, Recruitment.Rsum, Recruitment.Raddress from Job, Recruitment, Eu " +
                 "where Eu.Euse = '"+USER_ID+"' and Eu.Eid = Recruitment.Eid and Recruitment.Jid = Job.Jid";
         String []keys = {"key1", "key2", "key3"};
         List<HashMap<String, Object>> data = SQLiteInteractor.getData(mPresenter.mView.mDatabase, sql, keys);

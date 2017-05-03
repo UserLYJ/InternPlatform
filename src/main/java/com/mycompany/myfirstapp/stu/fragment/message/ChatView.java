@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -36,7 +37,10 @@ public class ChatView extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v) {
         String message = mMessage.getText().toString();
         View chatBox = getLayoutInflater().inflate(R.layout.page_chatbox, mChatContainer, false);
+
         ((TextView)chatBox.findViewById(R.id.textView6)).setText(message);
+        ((ImageView)chatBox.findViewById(R.id.stuimage)).setImageResource(R.drawable.cor_header);
+
         mChatContainer.addView(chatBox);
         mMessage.setText("");
     }

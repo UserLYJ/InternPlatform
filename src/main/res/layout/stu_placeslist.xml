@@ -30,6 +30,7 @@
     </LinearLayout>
 
     <GridView
+        android:padding="10dp"
         android:id="@+id/gv_stu_placeslist"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

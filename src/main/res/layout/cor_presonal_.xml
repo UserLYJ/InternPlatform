@@ -66,16 +66,6 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_weight="0.04"
-        android:text="-------------------------------------功能模块--------------------------------------"
-        android:textAlignment="center"
-        android:textColor="@color/dim_foreground_material_dark" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -171,6 +161,7 @@
                     android:layout_width="70dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center_horizontal"
+                    android:clickable="true"
                     android:forceHasOverlappingRendering="false"
                     android:src="@drawable/feedback_"
                     android:textAlignment="center" />
@@ -357,16 +348,6 @@
             </LinearLayout>
 
         </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@android:color/darker_gray"
-        android:orientation="horizontal">
-
     </LinearLayout>
 
     <TextView

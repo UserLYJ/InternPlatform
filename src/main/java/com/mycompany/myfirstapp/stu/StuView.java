@@ -38,7 +38,7 @@ public class StuView extends AppCompatActivity implements View.OnClickListener{
     private PlaceFragment mJobFragment;
     private MeFragment mMeFragment;
     Bitmap[] mTabButtonBitmap = new Bitmap[10];
-    private SQLiteDatabase mDatabase;
+    public SQLiteDatabase mDatabase;
 
 
     @Override

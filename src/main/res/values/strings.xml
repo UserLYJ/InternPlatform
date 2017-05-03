@@ -1,6 +1,26 @@
 <resources>
     <string name="app_name">Helloworld</string>
-
+    <string name="requirment">任职要求:\n1、大专以上学历，熟悉JAVA基础知识
+3、熟悉面向对象思想、熟悉软件开发流程，熟悉面向对象的设计和开发过程；、熟练掌握主流J2EE框架(struts2,spring,hibernate等)；
+4、能较好使用JSP，JavaScript，HTML，CSS等WEB开发技术
+5、能使用Struts、Spring、Hibernate等常用框架、熟练掌握至少一种常用数据库（Oracle、MySql、SqlServer）；
+6、有一些代码开发经验、善于总结知识、乐于分享，工作热情、积极主动；
+7、有强烈的责任心和团队合作精神，具备良好的沟通能力、学习能力、逻辑思维能力、抗压能力，积极主动，细心，有条理性
+8、接收能力强的应届生。</string>
+    <string name="bonus">福利待遇:\n
+做项目有工程师带// 态度一定要端正；
+实习薪资：会根据你的考勤/态度/综合素质/以及做项目积极性/配合公司安排/   综合收入加提成3000以上(转正4000)// 具体面议；（薪资均以能力来定） 中午休息两个小时//  国家规定节假日休息// 公司全体有热水咖啡提供// 员工生日有礼物；
+    </string>
+    <string name="indroduction">
+        公司简介:\n阿里巴巴网络技术有限公司（简称：阿里巴巴集团）是以曾担任英语教师的马云为首的18人，于1999年在杭州创立，他们相信互联网能够创造公平的竞争环境，让小企业通过创新与科技扩展业务，并在参与国内或全球市场竞争时处于更有利的位置。
+    </string>
+    <string-array name="registeredStu">
+        <item>Jason</item>
+        <item>Marry</item>
+        <item>Bob</item>
+        <item>Stacy</item>
+        <item>Vivian</item>
+    </string-array>
     <string-array name="spetype">
         <item>不限</item>
         <item>java</item>
@@ -39,7 +59,6 @@
         <item>杭州电子科技大学</item>
         <item>浙江大学</item>
     </string-array>
-
 
 
     <string-array name="province_">
@@ -114,7 +133,6 @@
     </string-array>
 
 
-
     <string-array name="istraining">
         <item>是否实习</item>
         <item>是</item>
@@ -134,8 +152,34 @@
         <item>计算机科学与技术</item>
         <item>卫生检验与检疫</item>
     </string-array>
-
-   <!-- <string-array name="sasas">
+     <string-array name="job_title">
+         <item>C++工程师</item>
+         <item>Java工程师</item>
+         <item>网页设计师</item>
+         <item>前端工程师</item>
+     </string-array>
+    <string-array name="province">
+        <item>浙江省</item>
+        <item>山东省</item>
+        <item>江苏省</item>
+        <item>安徽省</item>
+        <item>河南省</item>
+    </string-array>
+    <string-array name="city">
+        <item>杭州市</item>
+        <item>宁波市</item>
+        <item>台州市</item>
+        <item>嘉兴市</item>
+        <item>温州市</item>
+    </string-array>
+    <string-array name="county">
+        <item>滨江区</item>
+        <item>江干区</item>
+        <item>西湖区</item>
+        <item>拱墅区</item>
+        <item>下沙</item>
+    </string-array>
+    <!-- <string-array name="sasas">
         <item></item>
         <item></item>
         <item></item>
@@ -155,9 +199,6 @@
         <item></item>
         <item></item>
     </string-array>-->
-
-
-
 
 
 </resources>

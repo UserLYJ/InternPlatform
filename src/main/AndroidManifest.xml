@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="职行"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".index.IndexView">
@@ -15,28 +15,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".cor.CorView"></activity>
-        <activity android:name=".sch.SchView"></activity>
-        <activity android:name=".stu.StuView"></activity>
-        <activity android:name=".cor.fragment.resume.StudentDetailsView"></activity>
-        <activity android:name=".cor.fragment.message.ChatView"></activity>
-        <activity android:name=".cor.fragment.place.PlaceView"></activity>
-        <activity android:name=".cor.fragment.trainingdep.TrainingView"></activity>
-        <activity android:name=".cor.fragment.me.CollectionView"></activity>
-        <activity android:name=".cor.fragment.me.InforView"></activity>
-        <activity android:name=".cor.fragment.me.OfferView"></activity>
-        <activity android:name=".cor.fragment.place.AddPlaceView"></activity>
-        <activity android:name=".cor.fragment.trainingdep.AddTeacherView"></activity>
-        <activity android:name=".stu.fragment.message.ChatView"></activity>
-        <activity android:name=".stu.fragment.register.RegisterView"></activity>
-        <activity android:name=".sch.fragment.message.ChatView"></activity>
-        <activity android:name=".sch.fragment.mystudents.StudentsView"></activity>
-        <activity android:name=".sch.fragment.teachingplan.AddPlanView"></activity>
-        <activity android:name=".sch.fragment.teachingplan.PlanDetailsView"></activity>
-        <activity android:name=".sch.fragment.me.PushTrainView"></activity>
-        <activity android:name=".cor.fragment.cor.TeachPlanView"></activity>
-        <activity android:name=".cor.fragment.me.AddPlaceView"></activity>
-        <activity android:name=".stu.fragment.register.AddExperienceView"></activity>
+        <activity android:name=".cor.CorView" />
+        <activity android:name=".sch.SchView" />
+        <activity android:name=".stu.StuView" />
+        <activity android:name=".cor.fragment.resume.StudentDetailsView" />
+        <activity android:name=".cor.fragment.message.ChatView" />
+        <activity android:name=".cor.fragment.place.PlaceView" />
+        <activity android:name=".cor.fragment.trainingdep.TrainingView" />
+        <activity android:name=".cor.fragment.me.CollectionView" />
+        <activity android:name=".cor.fragment.me.InforView" />
+        <activity android:name=".cor.fragment.me.OfferView" />
+        <activity android:name=".cor.fragment.place.AddPlaceView" />
+        <activity android:name=".cor.fragment.trainingdep.AddTeacherView" />
+        <activity android:name=".stu.fragment.message.ChatView" />
+        <activity android:name=".stu.fragment.register.RegisterView" />
+        <activity android:name=".sch.fragment.message.ChatView" />
+        <activity android:name=".sch.fragment.mystudents.StudentsView" />
+        <activity android:name=".sch.fragment.teachingplan.AddPlanView" />
+        <activity android:name=".sch.fragment.teachingplan.PlanDetailsView" />
+        <activity android:name=".sch.fragment.me.PushTrainView" />
+        <activity android:name=".cor.fragment.cor.TeachPlanView" />
+        <activity android:name=".cor.fragment.me.AddPlaceView" />
+        <activity android:name=".stu.fragment.register.AddExperienceView" />
+        <activity android:name=".sch.fragment.sch.GiveNumberView" />
+        <activity android:name=".stu.fragment.stu.WanttodoView" />
+        <activity android:name=".cor.fragment.me.FeedbackView"></activity>
     </application>
 
 </manifest>

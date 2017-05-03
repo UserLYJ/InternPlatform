@@ -39,13 +39,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="25dp"
-                android:text="职位名称" />
+                android:text="职位名称 : Java开发实习生" />
 
             <TextView
                 android:id="@+id/tv_cor_name"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="公司名称" />
+                android:text="公司名称：阿里巴巴" />
 
         </LinearLayout>
     </LinearLayout>
@@ -61,14 +61,39 @@
     <TextView
         android:id="@+id/textView27"
         android:layout_width="match_parent"
-        android:layout_height="388dp"
-        android:layout_weight="0.65"
-        android:text="具体描述" />
+        android:layout_height="98dp"
+        android:text="@string/requirment" />
+
+    <View
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:text="@string/bonus" />
+
+    <View
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:text="@string/indroduction" />
 
     <Button
+        android:onClick="register"
         android:id="@+id/go"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="报名" />
 </LinearLayout>

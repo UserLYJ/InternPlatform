@@ -5,7 +5,7 @@ package com.mycompany.myfirstapp.stu;
  */
 
 public class StuPresenter {
-    private final StuView mView;
+    public final StuView mView;
     private final StuModel mModel;
 
     public StuPresenter(StuView mView) {

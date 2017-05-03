@@ -50,6 +50,6 @@
         android:id="@+id/btn_comfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="保存" />
+        android:text="返回" />
 
 </LinearLayout>

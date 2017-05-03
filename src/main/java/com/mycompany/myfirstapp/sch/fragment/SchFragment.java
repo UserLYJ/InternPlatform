@@ -2,31 +2,27 @@ package com.mycompany.myfirstapp.sch.fragment;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.SimpleAdapter;
 
 import com.mycompany.myfirstapp.R;
-import com.mycompany.myfirstapp.cor.CorPresenter;
-import com.mycompany.myfirstapp.cor.CorView;
 import com.mycompany.myfirstapp.sch.SchPresenter;
 import com.mycompany.myfirstapp.sch.SchView;
-import com.mycompany.myfirstapp.utilities.SQLiteInteractor;
+import com.mycompany.myfirstapp.sch.fragment.sch.GiveNumberView;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import static android.content.ContentValues.TAG;
-import static com.mycompany.myfirstapp.index.Constants.USER_ID;
 
 /**
  * Created by wangz on 2017/4/14.
@@ -39,6 +35,8 @@ public class SchFragment extends Fragment {
     GridView mList;
     int[] idLists = {R.id.textView25, R.id.textView24, R.id.textView26};
     SimpleAdapter mAdapter;
+    String []keys = {"key1", "key2", "key3"};
+    Button mPublish;
 
     @Override
     public void onAttach(Context context) {
@@ -49,6 +47,7 @@ public class SchFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.sch_main, container, false);
+
         mMe = (ImageView) view.findViewById(R.id.sch_presonal);
         mMe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +60,7 @@ public class SchFragment extends Fragment {
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                startActivity(new Intent(getContext(), GiveNumberView.class));
             }
         });
 
@@ -71,7 +70,6 @@ public class SchFragment extends Fragment {
 //                "and Assignment.Rid = Recruitment.Rid and Recruitment.Jid = Job.Jid " +
 //                "and Recruitment.Eid = Enterprise.Eid";
 //        Log.i(TAG, "onCreateView: "+sql);
-        String []keys = {"key1", "key2", "key3"};
 //        List<HashMap<String, Object>> data = SQLiteInteractor.getData(mPresenter.mView.mDatabase, sql, keys);
         List<HashMap<String, Object>> data = getAdapterData();
         mAdapter = new SimpleAdapter(getContext(), data, R.layout.sch_myplaces_module, keys, idLists);
@@ -80,6 +78,12 @@ public class SchFragment extends Fragment {
         return view;
     }
     List<HashMap<String, Object>> getAdapterData(){
-        
+        List<HashMap<String, Object>> data = new ArrayList<HashMap<String, Object>>();
+        HashMap<String, Object> map = new HashMap<String, Object>();
+        map.put(keys[0], "浙江中医药大学");
+        map.put(keys[1],"医学信息工程");
+        map.put(keys[2],"5/10");
+        data.add(map);
+        return data;
     }
 }

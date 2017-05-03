@@ -1,11 +1,13 @@
 package com.mycompany.myfirstapp.index;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,6 +29,7 @@ import java.io.InputStream;
 
 public class IndexView extends AppCompatActivity {
 
+    private static final String TAG = "IndexView";
     RadioGroup mRadioGroup;
     EditText mName, mPassword;
     Button mSignIn, mSignUp;

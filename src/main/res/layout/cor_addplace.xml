@@ -54,6 +54,7 @@
                     android:textSize="20sp" />
 
                 <Spinner
+                    android:entries="@array/job_title"
                     android:id="@+id/placeName"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -67,13 +68,12 @@
                     android:text="添加" />
             </LinearLayout>
 
-            <EditText
+            <TextView
+                android:textSize="20sp"
                 android:id="@+id/_diploma"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:ems="10"
-                android:inputType="textPersonName"
                 android:text="学历：" />
 
             <RadioGroup
@@ -182,7 +182,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="js" />
+                    android:text="JavaScript" />
 
                 <CheckBox
                     android:id="@+id/javakj"
@@ -220,7 +220,23 @@
                     android:layout_weight="3"
                     android:text="人数安排" />
             </LinearLayout>
-
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:entries="@array/province"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></Spinner>
+                <Spinner
+                    android:entries="@array/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></Spinner>
+                <Spinner
+                    android:entries="@array/county"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></Spinner>
+            </LinearLayout>
             <EditText
                 android:id="@+id/placeaddress"
                 android:layout_width="match_parent"
@@ -284,7 +300,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.03"
-                android:text="保存" />
+                android:text="提交" />
         </LinearLayout>
     </ScrollView>
 

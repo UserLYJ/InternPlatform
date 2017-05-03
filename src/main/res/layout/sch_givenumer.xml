@@ -39,19 +39,19 @@
                 android:id="@+id/tv_cor_placename"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="职位名称" />
+                android:text="职位名称:Java开发实习生" />
 
             <TextView
                 android:id="@+id/tv_cor_name"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="公司名称" />
+                android:text="公司名称：阿里巴巴" />
 
             <TextView
                 android:id="@+id/number"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="名额" />
+                android:text="名额：10" />
 
         </LinearLayout>
 
@@ -60,7 +60,7 @@
             android:layout_width="68dp"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="发布情况（是否已经发布）" />
+            android:text="发布情况（是否已经发布）：是" />
     </LinearLayout>
 
     <LinearLayout
@@ -74,9 +74,15 @@
     <TextView
         android:id="@+id/textView28"
         android:layout_width="match_parent"
-        android:layout_height="388dp"
-        android:layout_weight="1"
-        android:text="具体描述" />
+        android:layout_height="343dp"
+        android:text="具体描述：\n Java软件工程师是指运用Java这种开发语言去完成软件产品的软件程序设计、开发、测试、维护升级等工作的人员。" />
+
+    <Button
+        android:onClick="checkRegisteredStu"
+        android:id="@+id/button11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="已报名学生" />
 
     <Button
         android:id="@+id/button6"

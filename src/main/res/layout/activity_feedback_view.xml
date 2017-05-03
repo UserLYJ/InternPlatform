@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mycompany.myfirstapp.cor.fragment.me.FeedbackView">
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="姓名：\n张三" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="职位：\nJava工程师" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="评价：\n在公司领导的正确领导下，在同事们的热情帮助与支持下，通过自身的不懈努力，自己的思想水平和工作能力都有了很大的进步，专业技术水平也有了很大的提高，特别是在落实焦化公司提出的“安全质量标准化建设和设备质量标准化建设”方面做出了一定的工作，为公司日常管理打下了良好的基础 " />
+</LinearLayout>

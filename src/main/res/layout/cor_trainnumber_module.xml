@@ -26,15 +26,6 @@
                 android:text="学校名称"
                 android:textSize="30sp" />
 
-            <TextView
-                android:id="@+id/spename"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:paddingLeft="10dp"
-                android:text="专业名"
-                android:textSize="30sp" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -54,4 +45,5 @@
         </LinearLayout>
 
     </LinearLayout>
+
 </LinearLayout>
