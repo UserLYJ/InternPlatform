@@ -6,11 +6,17 @@
     android:orientation="vertical"
     android:weightSum="1">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/holo_green_light"
+        android:orientation="horizontal"></LinearLayout>
+
     <GridView
         android:id="@+id/gv_cor_myplacellist"
         android:layout_width="match_parent"
         android:layout_height="457dp"
-        android:layout_weight="0.96" />
+        android:layout_weight="0.88" />
 
     <Button
         android:id="@+id/btn_cor_addtrainteacher"

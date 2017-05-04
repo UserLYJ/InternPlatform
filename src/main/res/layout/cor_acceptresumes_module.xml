@@ -4,16 +4,21 @@
     android:layout_height="match_parent"
     android:background="#1cffe641"
     android:orientation="vertical"
-    android:weightSum="10">
+    android:weightSum="1">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:orientation="horizontal"
-        android:weightSum="8">
+        android:weightSum="9">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
 
         <ImageView
-            android:id="@+id/ximage"
+            android:id="@+id/stuname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="6"
@@ -27,27 +32,26 @@
             android:weightSum="3">
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/stuname"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="New Text" />
+                android:text="姓名" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/stuschool"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="New Text" />
+                android:text="学校" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/stuspename"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="New Text" />
+                android:text="专业" />
         </LinearLayout>
 
     </LinearLayout>
-
 </LinearLayout>

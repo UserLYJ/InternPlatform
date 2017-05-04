@@ -66,7 +66,6 @@
 
     </LinearLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,15 +76,15 @@
         android:visibility="visible">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/btn_cor_resume"
+                android:id="@+id/btn_cor_sitting"
                 android:layout_width="95dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_below="@+id/linearLayout2"
                 android:layout_gravity="left"
                 android:layout_toStartOf="@+id/linearLayout2"
@@ -93,20 +92,20 @@
                 android:weightSum="1">
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/imageView6"
                     android:layout_width="70dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center_horizontal"
                     android:forceHasOverlappingRendering="false"
-                    android:src="@drawable/infor_"
+                    android:src="@drawable/push_"
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/textView15"
+                    android:id="@+id/putplace"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.45"
-                    android:text="个人信息"
+                    android:text="发布岗位"
                     android:textAlignment="center"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@color/abc_background_cache_hint_selector_material_dark"
@@ -147,9 +146,41 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/btn_cor_feedback"
+                android:id="@+id/btn_cor_number"
                 android:layout_width="95dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_gravity="left"
+                android:layout_toStartOf="@+id/linearLayout2"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:forceHasOverlappingRendering="false"
+                    android:src="@drawable/access_"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/schnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:text="评价"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/abc_background_cache_hint_selector_material_dark"
+                    android:textSize="@dimen/abc_text_size_title_material_toolbar"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_cor_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_below="@+id/linearLayout2"
                 android:layout_gravity="left"
                 android:layout_toStartOf="@+id/linearLayout2"
@@ -161,7 +192,6 @@
                     android:layout_width="70dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center_horizontal"
-                    android:clickable="true"
                     android:forceHasOverlappingRendering="false"
                     android:src="@drawable/feedback_"
                     android:textAlignment="center" />
@@ -179,38 +209,6 @@
                     android:textStyle="normal" />
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/btn_cor_collection"
-                android:layout_width="95dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linearLayout2"
-                android:layout_gravity="left"
-                android:layout_toStartOf="@+id/linearLayout2"
-                android:orientation="vertical"
-                android:weightSum="1">
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="70dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center_horizontal"
-                    android:forceHasOverlappingRendering="false"
-                    android:src="@drawable/collection_"
-                    android:textAlignment="center" />
-
-                <TextView
-                    android:id="@+id/tv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.45"
-                    android:text="我的收藏"
-                    android:textAlignment="center"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/abc_background_cache_hint_selector_material_dark"
-                    android:textSize="@dimen/abc_text_size_title_material_toolbar"
-                    android:textStyle="normal" />
-            </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
@@ -219,7 +217,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/btn_cor_number"
+                android:id="@+id/btn_cor_resume"
                 android:layout_width="95dp"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/linearLayout2"
@@ -229,117 +227,20 @@
                 android:weightSum="1">
 
                 <ImageView
-                    android:id="@+id/imageView7"
+                    android:id="@+id/imageView5"
                     android:layout_width="70dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center_horizontal"
                     android:forceHasOverlappingRendering="false"
-                    android:src="@drawable/train_"
+                    android:src="@drawable/infor_"
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/schnumber"
+                    android:id="@+id/textView15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.45"
-                    android:text="学校需求"
-                    android:textAlignment="center"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/abc_background_cache_hint_selector_material_dark"
-                    android:textSize="@dimen/abc_text_size_title_material_toolbar"
-                    android:textStyle="normal" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/btn_cor_sitting"
-                android:layout_width="95dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linearLayout2"
-                android:layout_gravity="left"
-                android:layout_toStartOf="@+id/linearLayout2"
-                android:orientation="vertical"
-                android:weightSum="1">
-
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="70dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center_horizontal"
-                    android:forceHasOverlappingRendering="false"
-                    android:src="@drawable/push_"
-                    android:textAlignment="center" />
-
-                <TextView
-                    android:id="@+id/putplace"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.45"
-                    android:text="发布岗位"
-                    android:textAlignment="center"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/abc_background_cache_hint_selector_material_dark"
-                    android:textSize="@dimen/abc_text_size_title_material_toolbar"
-                    android:textStyle="normal" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/btn_cor_sitting"
-                android:layout_width="95dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linearLayout2"
-                android:layout_gravity="left"
-                android:layout_toStartOf="@+id/linearLayout2"
-                android:orientation="vertical"
-                android:weightSum="1">
-
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="70dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center_horizontal"
-                    android:forceHasOverlappingRendering="false"
-                    android:src="@drawable/settings_"
-                    android:textAlignment="center"
-                    app:srcCompat="@drawable/settings_" />
-
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.45"
-                    android:text="设置"
-                    android:textAlignment="center"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/abc_background_cache_hint_selector_material_dark"
-                    android:textSize="@dimen/abc_text_size_title_material_toolbar"
-                    android:textStyle="normal" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/btn_cor_more"
-                android:layout_width="95dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linearLayout2"
-                android:layout_gravity="left"
-                android:layout_toStartOf="@+id/linearLayout2"
-                android:orientation="vertical"
-                android:weightSum="1">
-
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="70dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center_horizontal"
-                    android:forceHasOverlappingRendering="false"
-                    android:src="@drawable/more_"
-                    android:textAlignment="center" />
-
-                <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.45"
-                    android:text="更多"
+                    android:text="个人信息"
                     android:textAlignment="center"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@color/abc_background_cache_hint_selector_material_dark"

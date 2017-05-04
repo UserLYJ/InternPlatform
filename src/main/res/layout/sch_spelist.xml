@@ -2,9 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1cffe641"
-    android:orientation="vertical"
-    android:weightSum="1">
+    android:orientation="vertical">
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,15 +15,7 @@
         android:orientation="horizontal"></LinearLayout>
 
     <GridView
-        android:id="@+id/gv_sch_planlist"
+        android:id="@+id/spelist"
         android:layout_width="match_parent"
-        android:layout_height="557dp"
-        android:layout_gravity="center_horizontal"
-        android:choiceMode="multipleChoice" />
-
-    <Button
-        android:id="@+id/btn_sch_addprofession"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="添加专业" />
+        android:layout_height="match_parent" />
 </LinearLayout>

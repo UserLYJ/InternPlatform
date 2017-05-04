@@ -5,6 +5,12 @@
     android:background="#1cffe641"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/holo_green_light"
+        android:orientation="horizontal"></LinearLayout>
+
     <GridView
         android:id="@+id/gv_schoolsspe"
         android:layout_width="wrap_content"

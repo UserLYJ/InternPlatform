@@ -6,6 +6,12 @@
     android:orientation="vertical"
     android:weightSum="1">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/holo_green_light"
+        android:orientation="horizontal"></LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -54,7 +60,6 @@
                     android:textSize="20sp" />
 
                 <Spinner
-                    android:entries="@array/job_title"
                     android:id="@+id/placeName"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -66,15 +71,16 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:text="添加" />
+
             </LinearLayout>
 
             <TextView
-                android:textSize="20sp"
-                android:id="@+id/_diploma"
+                android:id="@+id/textView32"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="学历：" />
+                android:layout_height="28dp"
+                android:layout_weight="0.20"
+                android:text="学历:"
+                android:textSize="18sp" />
 
             <RadioGroup
                 android:id="@+id/rg_degree"
@@ -133,7 +139,7 @@
                 android:layout_weight="0.20"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="所需语言：" />
+                android:text="擅长技能：" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -182,7 +188,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="JavaScript" />
+                    android:text="js" />
 
                 <CheckBox
                     android:id="@+id/javakj"
@@ -220,28 +226,55 @@
                     android:layout_weight="3"
                     android:text="人数安排" />
             </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
+
+            <TextView
+                android:id="@+id/address"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="28dp"
+                android:text="地址:"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
                 <Spinner
-                    android:entries="@array/province"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></Spinner>
+                    android:id="@+id/province_"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_weight="1"
+                    android:contextClickable="false"
+                    android:spinnerMode="dropdown"
+                    android:entries="@array/province_"/>
+
                 <Spinner
-                    android:entries="@array/city"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></Spinner>
+                    android:id="@+id/city_"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown"
+                    android:entries="@array/city_"/>
+
                 <Spinner
-                    android:entries="@array/county"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></Spinner>
+                    android:id="@+id/area_"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown"
+                    android:entries="@array/area_"/>
+
             </LinearLayout>
+
             <EditText
-                android:id="@+id/placeaddress"
+                android:id="@+id/decaddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="地址" />
+                android:layout_weight="0.20"
+                android:ems="10"
+                android:hint="具体地址"
+                android:inputType="textPersonName" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -300,7 +333,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.03"
-                android:text="提交" />
+                android:text="发布" />
         </LinearLayout>
     </ScrollView>
 
