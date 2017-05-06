@@ -40,15 +40,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="25dp"
-                android:text="名字：李杰"
+                android:text="名字"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tchprofession"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="职位：Java工程师"
-                 />
+                android:text="专业"
+                android:textSize="18sp" />
 
         </LinearLayout>
     </LinearLayout>
@@ -66,8 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.98"
-        android:text="具体描述：\n国山西阳泉人，百度公司的创建者，现任董事长兼首席执行官以及全国工商联副主席。李杰的资产基本都来自百分之二十点八的百度控股，该些股票直接由李杰所有，并通过注册地维珍群岛的Handsome Rewards公司持有。李杰还拥有京东商城百分之一的股份。
-" />
+        android:text="具体描述" />
 
     <LinearLayout
         android:layout_width="match_parent"

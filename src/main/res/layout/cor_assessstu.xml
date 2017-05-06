@@ -6,6 +6,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/holo_green_light"
+        android:orientation="horizontal"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="1">
@@ -34,7 +40,7 @@
                 android:id="@+id/stu_name"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="5dp"
                 android:text="名字"
                 android:textSize="18sp" />
 
@@ -42,7 +48,14 @@
                 android:id="@+id/stu_schname"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="专业"
+                android:text="学校"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="岗位"
                 android:textSize="18sp" />
 
         </LinearLayout>

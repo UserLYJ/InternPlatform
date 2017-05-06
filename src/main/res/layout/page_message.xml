@@ -23,13 +23,13 @@
                 android:id="@+id/schimage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/sch_header" />
+                android:src="@mipmap/ic_launcher" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="344dp"
                 android:layout_height="56dp"
-                android:text="我们的学生不愿去你们公司" />
+                android:text="New Text" />
         </LinearLayout>
 
         <LinearLayout
@@ -42,13 +42,13 @@
                 android:id="@+id/corimage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/stu_header" />
+                android:src="@mipmap/ic_launcher" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="344dp"
                 android:layout_height="56dp"
-                android:text="工资达不到15k就不要找我" />
+                android:text="New Text" />
         </LinearLayout>
 
         <LinearLayout
@@ -61,13 +61,13 @@
                 android:id="@+id/textView6"
                 android:layout_width="344dp"
                 android:layout_height="56dp"
-                android:text="大爷，你只要能来就好" />
+                android:text="New Text" />
 
             <ImageView
                 android:id="@+id/stuimage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/cor_header" />
+                android:src="@mipmap/ic_launcher" />
         </LinearLayout>
     </LinearLayout>
 
